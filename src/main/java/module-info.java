@@ -1,6 +1,7 @@
 module com.example.proyectogrupo6 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.xml;
 
 
     opens com.example.proyectogrupo6 to javafx.fxml;

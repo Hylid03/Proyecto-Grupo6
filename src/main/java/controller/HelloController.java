@@ -30,7 +30,7 @@ public class HelloController {
     }
     @FXML
     private void buttonOnAction(ActionEvent actionEvent) {
-        if (1) {
+        if (1) { //TODO fix this
             loadPage("lessonMaintaining.fxml");
         }else if (2){
             loadPage("courseMaintaining.fxml");
