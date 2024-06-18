@@ -2,6 +2,7 @@ module com.example.proyectogrupo6 {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.xml;
+    requires java.mail;
 
 
     opens com.example.proyectogrupo6 to javafx.fxml;

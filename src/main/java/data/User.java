@@ -3,11 +3,13 @@ package data;
 public class User {
     private String username;
     private String password;
+    private String email;
     private int role;
 
-    public User(String username, String password, int role) {
+    public User(String username, String password, String email,int role) {
         this.username = username;
         this.password = password;
+        this.email = email;
         this.role = role;
     }
 
