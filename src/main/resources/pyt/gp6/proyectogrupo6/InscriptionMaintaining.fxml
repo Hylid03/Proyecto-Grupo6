@@ -2,7 +2,12 @@
 
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="609.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InscriptionMaintainingController">
-
+   <children>
+      <Pane prefHeight="609.0" prefWidth="852.0" style="-fx-background-color: #51ab9c;">
+         <children>
+            <Pane prefHeight="99.0" prefWidth="861.0" style="-fx-background-color: #ee9f80;" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
