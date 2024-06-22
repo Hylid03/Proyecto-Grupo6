@@ -24,7 +24,12 @@
             <Label text="Nombre:" />
             <TextField fx:id="txf_Name" />
             <Label text="Contraseña:" />
-            <TextField fx:id="txf_Password" />
+            <PasswordField fx:id="txf_Password" />
+            <Pane prefHeight="43.0" prefWidth="855.0">
+               <children>
+                  <Text layoutX="221.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No tienes una cuenta? " />
+                  <Hyperlink layoutX="561.0" layoutY="10.0" text="click AQUI" />
+               </children></Pane>
             <Button mnemonicParsing="false" prefHeight="102.0" prefWidth="231.0" style="-fx-background-color: #baafc4;" text="Iniciar Sesión">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="12.0" />

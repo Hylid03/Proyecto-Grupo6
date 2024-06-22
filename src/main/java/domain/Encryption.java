@@ -27,7 +27,7 @@ public class Encryption {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             return null;
-        } //TODO this is a prototype that i got in the net, i'm yet to adapt it to usable code for this project
+        }
     }
 
 }
