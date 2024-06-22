@@ -3,6 +3,8 @@ module com.example.proyectogrupo6 {
     requires javafx.fxml;
     requires java.xml;
     requires java.mail;
+    requires kernel;
+    requires layout;
 
 
     opens pyt.gp6.proyectogrupo6 to javafx.fxml;
