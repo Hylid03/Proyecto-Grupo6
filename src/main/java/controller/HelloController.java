@@ -1,6 +1,6 @@
 package controller;
 
-import com.example.proyectogrupo6.HelloApplication;
+import pyt.gp6.proyectogrupo6.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

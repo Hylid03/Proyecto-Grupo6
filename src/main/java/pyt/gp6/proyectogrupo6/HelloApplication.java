@@ -1,4 +1,4 @@
-package com.example.proyectogrupo6;
+package pyt.gp6.proyectogrupo6;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

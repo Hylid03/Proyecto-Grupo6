@@ -5,8 +5,8 @@ module com.example.proyectogrupo6 {
     requires java.mail;
 
 
-    opens com.example.proyectogrupo6 to javafx.fxml;
-    exports com.example.proyectogrupo6;
+    opens pyt.gp6.proyectogrupo6 to javafx.fxml;
+    exports pyt.gp6.proyectogrupo6;
     exports controller;
     opens controller to javafx.fxml;
 }
