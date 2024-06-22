@@ -76,8 +76,9 @@ public class XMLDataSave {
     public void deleteElement(String tagName) throws Exception {
         NodeList nodeList = document.getElementsByTagName(tagName);
         if (nodeList.getLength() > 0) {
-            Node node = nodeList.item(0);
+            Node node = (Node) nodeList.item(0);
             node.getParentNode().removeChild(node);
+            //TODO hacer el getParentNode
             saveDocument();
         } else {
             throw new Exception("Tag not found");

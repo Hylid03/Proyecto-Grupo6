@@ -15,29 +15,33 @@ public class HelloController {
     @FXML
     public TextField txf_Password;
     private AnchorPane ap;
+
     private void loadPage(String page) {
-        FXMLLoader fxmlLoader= new FXMLLoader(HelloApplication.class.getResource(page));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
         try {
             this.ap.setCenterShape(fxmlLoader.load());
-        }catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
     @FXML
     private void login() {
         String username = txf_Name.getText();
         String password = txf_Password.getText();
     }
+
     @FXML
     private void buttonOnAction(ActionEvent actionEvent) {
-        if (1) { //TODO fix this
-            loadPage("lessonMaintaining.fxml");
-        }else if (2){
+          if (1) { //TODO fix this
+              loadPage("lessonMaintaining.fxml");
+         }else if (2){
             loadPage("courseMaintaining.fxml");
         }else if (3){
-            loadPage("inscriptionMaintaining.fxml");
+           loadPage("inscriptionMaintaining.fxml");
         }else{
-            loadPage("myLearningOnline.fxml");
-        }
+          loadPage("myLearningOnline.fxml");
+    }
+
     }
 }
