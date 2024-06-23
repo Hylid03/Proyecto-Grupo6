@@ -1,10 +1,10 @@
 package domain;
 
 public class Node {
-    private Object data; // Element stored in the node
-    private Integer priority; // Priority level (1=high, 2=medium, 3=low)
-    private Node next; // Link to the next node
-    private Node prev; // Link to the previous node
+    public Object data; // Element stored in the node
+    public Integer priority; // Priority level (1=high, 2=medium, 3=low)
+    public Node next; // Link to the next node
+    public Node prev; // Link to the previous node
     private int role; // Role: 0=admin, 1=tutor, 2=student
 
     // Constructors
