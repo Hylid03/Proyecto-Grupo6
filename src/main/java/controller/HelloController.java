@@ -24,7 +24,6 @@ public class HelloController {
     private AnchorPane aP;
     public HelloController() {
         try {
-            // Adjust the file path as per your actual XML file location
             this.dataManagement = new DataManagement("/userData");
         } catch (Exception e) {
             e.printStackTrace();
