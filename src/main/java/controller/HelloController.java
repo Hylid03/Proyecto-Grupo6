@@ -1,47 +1,61 @@
 package controller;
 
-import pyt.gp6.proyectogrupo6.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
 public class HelloController {
-    @FXML
-    public TextField txf_Name;
-    @FXML
-    public TextField txf_Password;
-    private AnchorPane ap;
 
-    private void loadPage(String page) {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
+    @FXML
+    private TextField txf_Name;
+
+    @FXML
+    private TextField txf_Password;
+
+    @FXML
+    private AnchorPane aP;
+
+    @FXML
+    private void buttonOnAction(ActionEvent actionEvent) {
+        String password = txf_Password.getText();
         try {
-            this.ap.setCenterShape(fxmlLoader.load());
+            if (password.contains("A")) {
+                loadPage("lessonMaintaining.fxml");
+            } else if (password.contains("B")) {
+                loadPage("courseMaintaining.fxml");
+            } else if (password.contains("C")) {
+                loadPage("inscriptionMaintaining.fxml");
+            } else {
+                loadPage("myLearningOnline.fxml");
+            }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace(); // Imprime la traza de la excepción para depuración
+            throw new RuntimeException("Error al cargar la página correspondiente", e);
         }
     }
 
     @FXML
-    private void login() {
-        String username = txf_Name.getText();
-        String password = txf_Password.getText();
+    private void createAccountOnAction(ActionEvent actionEvent) {
+        try {
+            loadPage("CreateAccount.fxml");
+        } catch (IOException e) {
+            e.printStackTrace(); // Imprime la traza de la excepción para depuración
+            throw new RuntimeException("Error al cargar la página correspondiente", e);
+        }
     }
 
-    @FXML
-    private void buttonOnAction(ActionEvent actionEvent) {
-          if (1) { //TODO fix this
-              loadPage("lessonMaintaining.fxml");
-         }else if (2){
-            loadPage("courseMaintaining.fxml");
-        }else if (3){
-           loadPage("inscriptionMaintaining.fxml");
-        }else{
-          loadPage("myLearningOnline.fxml");
-    }
+    private void loadPage(String fxmlFile) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/" + fxmlFile));
+        AnchorPane newPage = fxmlLoader.load();
 
+        if (aP == null) {
+            throw new IllegalStateException("AnchorPane 'aP' is null. Check FXML file.");
+        }
+
+        aP.getChildren().setAll(newPage);
     }
 }

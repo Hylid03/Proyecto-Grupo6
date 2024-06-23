@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="563.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyLearningOnlineController">
    <children>
-      <Pane layoutX="-112.0" prefHeight="563.0" prefWidth="840.0" style="-fx-background-color: #afcacc;" />
+      <Pane layoutX="-6.0" prefHeight="563.0" prefWidth="734.0" style="-fx-background-color: #afcacc;">
+         <children>
+            <Button layoutX="56.0" layoutY="106.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="176.0" text="Inscipción A La Plataforma" />
+            <Pane layoutX="6.0" prefHeight="78.0" prefWidth="728.0" style="-fx-background-color: #ffa02e;">
+               <children>
+                  <Label layoutX="231.0" layoutY="14.0" prefHeight="49.0" prefWidth="260.0" text="Mi Aprendizaje Online">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button layoutX="323.0" layoutY="111.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="176.0" text="Acceso A Lecciones" />
+            <Button layoutX="134.0" layoutY="282.0" mnemonicParsing="false" prefHeight="129.0" prefWidth="225.0" text="Seguimiento Del Progreso" />
+         </children></Pane>
    </children>
 </AnchorPane>
