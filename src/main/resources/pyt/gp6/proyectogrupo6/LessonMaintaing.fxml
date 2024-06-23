@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="545.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LessonMaintainingController">
+   <children>
+      <Pane prefHeight="568.0" prefWidth="831.0" style="-fx-background-color: #69d2cd;">
+         <children>
+            <Pane layoutY="-7.0" prefHeight="95.0" prefWidth="831.0" style="-fx-background-color: #ee9f80;">
+               <children>
+                  <Label layoutX="185.0" layoutY="-2.0" prefHeight="99.0" prefWidth="462.0" text="Mantenimiento de Lecciones">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button layoutX="37.0" layoutY="118.0" mnemonicParsing="false" prefHeight="147.0" prefWidth="234.0" text="Crear Lección" onAction="#crearLeccion" />
+            <Button layoutX="37.0" layoutY="284.0" mnemonicParsing="false" prefHeight="147.0" prefWidth="234.0" text="Editar Lección" onAction="#editarLeccion" />
+            <Button layoutX="305.0" layoutY="118.0" mnemonicParsing="false" prefHeight="318.0" prefWidth="344.0" text="Eliminar Lección" onAction="#eliminarLeccion" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

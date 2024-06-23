@@ -7,17 +7,16 @@ import javafx.scene.control.DialogPane;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.BorderPane;
 import java.io.IOException;
+import java.util.Objects;
 
 public class UtilityFX {
 
     public static void loadPage(String className, String page, BorderPane bp){
         try {
-            Class cl = Class.forName(className);
+            Class<?> cl = Class.forName(className);
             FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource(page));
             bp.setCenter(fxmlLoader.load());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -27,7 +26,7 @@ public class UtilityFX {
         myalert.setTitle(title);
         myalert.setHeaderText(headerText);
         DialogPane dialogPane = myalert.getDialogPane();
-        String css = HelloApplication.class.getResource("dialog.css").toExternalForm();
+        String css = Objects.requireNonNull(HelloApplication.class.getResource("dialog.css")).toExternalForm();
         dialogPane.getStylesheets().add(css);
         dialogPane.getStyleClass().add("myDialog");
         return myalert;
@@ -37,7 +36,7 @@ public class UtilityFX {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle(title);
         dialog.setHeaderText(headerText);
-        String css = HelloApplication.class.getResource("dialog.css").toExternalForm();
+        String css = Objects.requireNonNull(HelloApplication.class.getResource("dialog.css")).toExternalForm();
         dialog.getEditor().getStylesheets().add(css);
         return dialog;
     }

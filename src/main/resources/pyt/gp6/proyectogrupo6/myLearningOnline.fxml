@@ -8,7 +8,8 @@
    <children>
       <Pane layoutX="-6.0" prefHeight="563.0" prefWidth="734.0" style="-fx-background-color: #afcacc;">
          <children>
-            <Button layoutX="56.0" layoutY="106.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="176.0" text="Inscipción A La Plataforma" />
+            <ListView fx:id="cursoListView" layoutX="14.0" layoutY="139.0" prefHeight="413.0" prefWidth="710.0" />
+            <Button layoutX="507.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleInscripcionCurso" prefHeight="40.0" prefWidth="176.0" text="Inscribirse en Curso" />
             <Pane layoutX="6.0" prefHeight="78.0" prefWidth="728.0" style="-fx-background-color: #ffa02e;">
                <children>
                   <Label layoutX="231.0" layoutY="14.0" prefHeight="49.0" prefWidth="260.0" text="Mi Aprendizaje Online">
@@ -18,8 +19,9 @@
                   </Label>
                </children>
             </Pane>
-            <Button layoutX="323.0" layoutY="111.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="176.0" text="Acceso A Lecciones" />
-            <Button layoutX="134.0" layoutY="282.0" mnemonicParsing="false" prefHeight="129.0" prefWidth="225.0" text="Seguimiento Del Progreso" />
-         </children></Pane>
+            <Button layoutX="24.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleAccesoLecciones" prefHeight="40.0" prefWidth="176.0" text="Acceder a Lecciones" />
+            <Button layoutX="267.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleSeguimientoProgreso" prefHeight="40.0" prefWidth="176.0" text="Seguimiento de Progreso" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

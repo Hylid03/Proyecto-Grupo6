@@ -13,13 +13,12 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            // Ajusta la ruta del archivo FXML según su ubicación real
             loader.setLocation(getClass().getResource("Login.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Login");
+            primaryStage.setTitle("Proyecto Algoritmos Grupo 6");
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
