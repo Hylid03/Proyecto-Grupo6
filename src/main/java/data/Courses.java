@@ -1,7 +1,5 @@
 package data;
 
-import controller.LessonMaintainingController;
-
 import java.util.ArrayList;
 
 public class Courses {

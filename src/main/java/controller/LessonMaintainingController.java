@@ -113,7 +113,6 @@ public class LessonMaintainingController {
         }
     }
 
-
     private void showAlert(String title, String message) {
         Alert alert = util.UtilityFX.alert(title, message);
         alert.show();

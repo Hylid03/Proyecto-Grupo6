@@ -22,10 +22,13 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#agregarCurso" prefHeight="118.0" prefWidth="166.0" text="Crear un nuevo curso" />
-            <Button layoutX="191.0" layoutY="150.0" mnemonicParsing="false" prefHeight="118.0" prefWidth="166.0" text="Editar un curso existente" />
-            <Button layoutX="14.0" layoutY="286.0" mnemonicParsing="false" onAction="#eliminarCurso" prefHeight="118.0" prefWidth="166.0" text="Eliminar un curso existente" />
-            <Button layoutX="191.0" layoutY="286.0" mnemonicParsing="false" prefHeight="118.0" prefWidth="166.0" text="Volver al escritorio virtual" />
+            <Button layoutX="6.0" layoutY="150.0" mnemonicParsing="false" onAction="#agregarCurso" prefHeight="118.0" prefWidth="166.0" text="Crear un nuevo curso" />
+            <Button layoutX="180.0" layoutY="150.0" mnemonicParsing="false" onAction="#editarCurso" prefHeight="118.0" prefWidth="166.0" text="Editar un curso existente" />
+            <Button layoutX="6.0" layoutY="286.0" mnemonicParsing="false" onAction="#eliminarCurso" prefHeight="118.0" prefWidth="166.0" text="Eliminar un curso existente" />
+            <Button layoutX="180.0" layoutY="286.0" mnemonicParsing="false" onAction="#mantenerLecciones" prefHeight="118.0" prefWidth="166.0" text="Ir a mantenimiento de lecciones">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
             <TableView fx:id="cursoTableView" layoutX="371.0" layoutY="116.0" prefHeight="458.0" prefWidth="572.0">
                <columns>
                   <TableColumn fx:id="nombreColumn" prefWidth="172.0" text="Nombre" />

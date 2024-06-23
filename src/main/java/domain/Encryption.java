@@ -1,7 +1,6 @@
 package domain;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Scanner;
 
 
 public class Encryption {
