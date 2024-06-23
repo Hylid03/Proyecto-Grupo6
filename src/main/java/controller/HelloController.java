@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.TextField;
+import pyt.gp6.proyectogrupo6.HelloApplication;
 
 import java.io.IOException;
 
@@ -49,7 +50,8 @@ public class HelloController {
     }
 
     private void loadPage(String fxmlFile) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/" + fxmlFile));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource( fxmlFile));
         AnchorPane newPage = fxmlLoader.load();
 
         if (aP == null) {
