@@ -23,21 +23,24 @@
                </children></Pane>
             <Pane layoutY="76.0" prefHeight="535.0" prefWidth="852.0">
                <children>
-                  <Button layoutX="190.0" layoutY="31.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="174.0" style="-fx-background-color: lightBLUE;" text="Gestionar Inscripciones" />
-                  <Button layoutX="468.0" layoutY="31.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="174.0" style="-fx-background-color: #bda2a2;" text="Notificación de Inscripciones" />
-                  <ScrollPane layoutX="122.0" layoutY="113.0" prefHeight="349.0" prefWidth="634.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="633.0">
+                  <Button layoutX="14.0" layoutY="320.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="174.0" style="-fx-background-color: RED;" text="Inscribirse al curso" />
+                  <Button layoutX="14.0" layoutY="241.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="174.0" style="-fx-background-color: LIGHTGREEN;" text="Confirmar Inscripción" />
+                  <Button layoutX="14.0" layoutY="79.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="174.0" style="-fx-background-color: lightBLUE;" text="Gestionar Inscripciones" />
+                  <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="174.0" style="-fx-background-color: LIGHTYELLOW;" text="Cancelar Inscripciones" />
+                  <Button layoutX="14.0" layoutY="387.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="184.0" style="-fx-background-color: #bda2a2;" text="Notificación de Inscripciones" />
+                  <ScrollPane layoutX="224.0" layoutY="87.0" prefHeight="349.0" prefWidth="605.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="633.0">
                            <children>
                               <TableView fx:id="Table" prefHeight="335.0" prefWidth="618.0">
-                                <columns>
-                                  <TableColumn fx:id="Courses" prefWidth="286.0" text="Curso" />
-                                  <TableColumn fx:id="Tutor" prefWidth="331.0" text="Tutor" />
-                                </columns>
+                                 <columns>
+                                    <TableColumn fx:id="Courses" prefWidth="286.0" text="Curso" />
+                                    <TableColumn fx:id="Tutor" prefWidth="331.0" text="Tutor" />
+                                 </columns>
                               </TableView>
                            </children>
                         </AnchorPane>
-                    </content>
+                     </content>
                   </ScrollPane>
                </children>
             </Pane>

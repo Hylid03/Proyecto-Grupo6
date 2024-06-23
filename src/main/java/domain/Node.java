@@ -1,44 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package domain;
 
-/**
- *
- * @author Profesor Lic. Gilberth Chaves A.
- */
 public class Node {
-    public Object data; //elemento guardado en el nodo
-    public Integer priority; //1=high, 2=medium, 3=low
-    public Node next; //enlace al sgte nodo
-    public Node prev;
+    private Object data; // Element stored in the node
+    private Integer priority; // Priority level (1=high, 2=medium, 3=low)
+    private Node next; // Link to the next node
+    private Node prev; // Link to the previous node
+    private int role; // Role: 0=admin, 1=tutor, 2=student
 
-    //Constructor
-    public Node(Object data){
+    // Constructors
+    public Node(Object data) {
         this.data = data;
-        this.next = null; //apunta a nulo
+        this.next = null;
+        this.prev = null;
     }
-    
-    //Constructor sobrecargado
-    public Node(Object data, Integer priority){
+
+    public Node(Object data, Integer priority) {
         this.data = data;
         this.priority = priority;
-        this.next = null; //apunta a nulo
-    }
-    
-    //Constructor sobrecargado
-    public Node(){
-        this.next = null; //apunta a nulo
+        this.next = null;
+        this.prev = null;
     }
 
+    // Getters and setters
     public Object getData() {
         return data;
     }
 
     public void setData(Object data) {
         this.data = data;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 
     public Node getNext() {
@@ -49,12 +46,19 @@ public class Node {
         this.next = next;
     }
 
-    public Integer getPriority() {
-        return priority;
+    public Node getPrev() {
+        return prev;
     }
 
-    public void setPriority(Integer priority) {
-        this.priority = priority;
-    }        
-    
+    public void setPrev(Node prev) {
+        this.prev = prev;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
 }

@@ -32,6 +32,19 @@ public class DataManagement {
             org.w3c.dom.Element rootElement = doc.getDocumentElement();
             document = convertToCustomNode(rootElement);
         }
+
+    }
+    public int getRole(String username) throws Exception {
+        Node userNode = findNode(document, username);
+        if (userNode != null && userNode.getNext() != null) {
+            try {
+                return Integer.parseInt(userNode.getNext().getNext().getData().toString());
+            } catch (NumberFormatException e) {
+                throw new Exception("Invalid role format");
+            }
+        } else {
+            throw new Exception("User not found");
+        }
     }
 
     private Node convertToCustomNode(org.w3c.dom.Node w3cNode) {
@@ -73,11 +86,13 @@ public class DataManagement {
         }
     }
 
-    public void addElement(String parentTag, String tagName, String textContent) throws Exception {
+    public void addElement(String parentTag, String tagName, String clearTextPassword) throws Exception {
         Node parent = findNode(document, parentTag);
         if (parent != null) {
+            // Encrypt the password before storing it
+            String encryptedPassword = Encryption.encryptPassword(clearTextPassword);
             Node newElement = new Node(tagName);
-            newElement.setNext(new Node(textContent));
+            newElement.setNext(new Node(encryptedPassword));
             appendChild(parent, newElement);
             saveDocument();
         } else {
@@ -110,16 +125,20 @@ public class DataManagement {
     public String getElementValue(String tagName) throws Exception {
         Node node = findNode(document, tagName);
         if (node != null && node.getNext() != null) {
-            return node.getNext().getData().toString();
+            // Decrypt the stored password
+            String encryptedPassword = node.getNext().getData().toString();
+            return encryptedPassword;
         } else {
             throw new Exception("Tag not found");
         }
     }
 
-    public void updateElementValue(String tagName, String newValue) throws Exception {
+    public void updateElementValue(String tagName, String newClearTextPassword) throws Exception {
         Node node = findNode(document, tagName);
         if (node != null && node.getNext() != null) {
-            node.getNext().setData(newValue);
+            // Encrypt the new password before updating
+            String encryptedPassword = Encryption.encryptPassword(newClearTextPassword);
+            node.getNext().setData(encryptedPassword);
             saveDocument();
         } else {
             throw new Exception("Tag not found");

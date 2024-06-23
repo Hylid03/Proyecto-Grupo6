@@ -1,5 +1,6 @@
 package util;
 
+import data.User;
 import pyt.gp6.proyectogrupo6.HelloApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
@@ -39,5 +40,13 @@ public class UtilityFX {
         String css = Objects.requireNonNull(HelloApplication.class.getResource("dialog.css")).toExternalForm();
         dialog.getEditor().getStylesheets().add(css);
         return dialog;
+    }
+
+
+    public static boolean checkCredentials(String username, String password, User user) {
+        if (username == user.getUsername()&&password == user.getUsername()) {
+            return true;
+        }
+        return false;
     }
 }
